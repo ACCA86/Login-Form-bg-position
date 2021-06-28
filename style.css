@@ -1,0 +1,105 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{background:linear-gradient(100deg, #6bc166, #137713);}
+
+.con{width:60%;position:relative;display:flex;height:28rem;outline:none;border:none;left:20%;top:30px;background:transparent;
+}
+.left{width:50%;height:100%;display:inline-block;
+	z-index:1;}
+.right{width:50%;z-index:2;
+display:inline-block;}
+img{width:100%;height:100%;}
+.small{width:100%;height:100%;display:flex;flex-direction:column;
+background:url('bg.jpeg');background-size:200% 100%;}
+.small h1{color:#fff;letter-spacing:1px;font-size:40px;margin-top:20px;text-align:center;align-items:center;font-weight:700;}
+.small form{margin-top: 60px;}
+.small label{color:#fff;display:block;font-size:24px;margin-left:25px;margin-bottom:5px;
+	font-weight:bold;letter-spacing:2px;}
+.small input{background:transparent;display:block;font-size:23px;margin-left:25px;
+margin-bottom:15px;font-weight:bold;width:90%;padding:1.2rem;height:40px;border:2px solid;
+border-radius:10px;outline:none;animation:inpt 4s infinite;color:#fff;}
+.small .forget{color:#fff;display:block;float:right;margin-right:20px;}
+.submit{text-decoration:none;text-align:center;justify-content:center;border-radius:20px;
+	background:rgba(0, 0, 0, .3);color:#fff;font-size:34px;font-weight:bold;width:300px;display:flex;
+	animation:btn 2s infinite;border:3px solid;align-items:center;width:90%;margin-left:20px;}
+
+	/*======To Using In Javascript=====*/
+.moveright{animation:moveright 3s infinite;}
+.moveleft{animation:moveleft 3s infinite;}
+.back{animation:back 3s infinite;}
+	
+	@keyframes btn{
+		0%,30%,40%{
+			border-bottom-color:#1eff76 ;/*====*/
+			border-top-color:#23b53a;  /*====*/
+			border-left-color:#9fec96; /*=====*/
+			border-right-color:#21f111;
+			}
+		50%,60%{
+			border-bottom-color:#21f111 ;
+			border-top-color:#9fec96;
+			border-left-color:#1eff76;
+			border-right-color:#23b53a;
+			}
+		70%,80%{
+			border-bottom-color:#23b53a;
+			border-top-color:#21f111;
+			border-left-color:#21f111;
+			border-right-color:#9fec96;
+			}
+		90%,100%{
+			border-bottom-color:#9fec96;
+			border-top-color:#21f111;
+			border-left-color:#23b53a;
+			border-right-color:#21f111;
+			}
+	}
+	@keyframes inpt{
+		0%,30%,40%{
+			border-bottom-color:#1eff76 ;/*====*/
+			border-top-color:#23b53a;  /*====*/
+			border-left-color:#9fec96; /*=====*/
+			border-right-color:#21f111;
+			}
+		50%,60%{
+			border-bottom-color:#21f111 ;
+			border-top-color:#9fec96;
+			border-left-color:#1eff76;
+			border-right-color:#23b53a;
+			}
+		70%,80%{
+			border-bottom-color:#23b53a;
+			border-top-color:#21f111;
+			border-left-color:#21f111;
+			border-right-color:#9fec96;
+			}
+		90%,100%{
+			border-bottom-color:#9fec96;
+			border-top-color:#21f111;
+			border-left-color:#23b53a;
+			border-right-color:#21f111;
+			}
+	}
+
+	@keyframes back{
+	0%{background-position:0% 50%;}
+	45%{background-position:50% 50%;}
+	60%{background-position:100% 50%;}
+	70%{background-position:50% 50%;}
+	100%{background-position:0% 50%;}
+}
+@keyframes moveleft{
+	0%{transform: translateX(0);}
+	45%{transform:translateX(50%);}
+	60%{transform:translateX(100%);}
+	70%{transform:translateX(50%);}
+	100%{transform:translateX(0%);}
+}
+
+@keyframes moveright{
+	0%{transform: translateX(0);}
+	45%{transform:translateX(-50%);}
+	60%{transform:translateX(-100%);}
+	70%{transform:translateX(-50%);}
+	100%{transform:translateX(0%);}
+}
